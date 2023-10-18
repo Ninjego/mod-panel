@@ -18,7 +18,7 @@ function ModPanelService:Init(serviceBag)
     self._maid.remoteEvent = Instance.new("RemoteEvent", ReplicatedStorage)
 end
 
--- Checks for moderators connecting
+-- Checks for administrators connecting
 function ModPanelService:Start()
     print("Started Mod Panel Service")
 

@@ -8,6 +8,7 @@ local Administrators = {
     [136400539] = true,
 }
 
+-- Checks if the player is an administrator
 function ModeratorUtil.evalutePlayer(player)
 
     if(Administrators[player.UserId]) then
@@ -17,6 +18,7 @@ function ModeratorUtil.evalutePlayer(player)
     
 end
 
+-- Sends action to client
 function ModeratorUtil.sendClient(action, player, maid)
 
     if not(maid.remoteEvent:IsA("RemoteEvent")) then

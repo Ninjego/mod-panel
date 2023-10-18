@@ -10,6 +10,7 @@ local ClientActions = {
     end,
 }
 
+-- Checks for client action and executes it
 function clientActionsUtil.fireAction(action, player, maid)
 
     if not(ClientActions[action]) then

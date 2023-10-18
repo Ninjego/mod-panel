@@ -16,6 +16,7 @@ function ModPanelServiceClient:Init(serviceBag)
     self._maid = Maid.new()
 end
 
+-- Listens for client remote event
 function ModPanelServiceClient:Start()
     RemoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 

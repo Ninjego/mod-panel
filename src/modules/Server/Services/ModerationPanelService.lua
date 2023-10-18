@@ -8,6 +8,7 @@ local ModeratorUtil = require("ModeratorUtil")
 local ModPanelService = {}
 ModPanelService.ServiceName = "ModPanelService"
 
+-- Mod Panel Service initializing
 function ModPanelService:Init(serviceBag)
     assert(not self._serviceBag, "Already initialized")
     self._serviceBag = assert(serviceBag, "No serviceBag")
@@ -17,8 +18,9 @@ function ModPanelService:Init(serviceBag)
     self._maid.remoteEvent = Instance.new("RemoteEvent", ReplicatedStorage)
 end
 
+-- Checks for moderators connecting
 function ModPanelService:Start()
-    print("Started ModPanel Service")
+    print("Started Mod Panel Service")
 
     self._maid:GiveTask(Players.PlayerAdded:Connect(function(player)
          self:LoadPanel(player)
@@ -26,6 +28,7 @@ function ModPanelService:Start()
 
 end
 
+-- Loads panel for each administrator connecting
 function ModPanelService:LoadPanel(player)
     local isAdmin = self._moderatorUtil.evalutePlayer(player)
     if not(isAdmin) then return end

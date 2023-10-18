@@ -1,0 +1,22 @@
+{
+  "name": "modnevermore",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "Roblox",
+    "Nevermore",
+    "Lua"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@quenty/binder": "^9.0.0",
+    "@quenty/clienttranslator": "^9.0.0",
+    "@quenty/cmdrservice": "^8.0.1",
+    "@quenty/loader": "^7.0.0",
+    "@quenty/maid": "^2.6.0",
+    "@quenty/servicebag": "^7.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

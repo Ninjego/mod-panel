@@ -1,3 +1,7 @@
+local require = require(script.Parent.loader).load(script)
+
+local ClientActionsUtil = require("ClientActionsUtil")
+
 local ModeratorUtil = {}
 
 local Administrators = {
@@ -13,10 +17,16 @@ function ModeratorUtil.evalutePlayer(player)
     
 end
 
-function ModeratorUtil.sendClient(player)
+function ModeratorUtil.sendClient(action, player, maid)
 
+    if not(maid.remoteEvent:IsA("RemoteEvent")) then
+        return
+    end
+
+    local action = maid:GiveTask(ClientActionsUtil.fireAction(action, player, maid))
+
+    return
     
-
 end
 
 return ModeratorUtil

@@ -23,6 +23,7 @@ function ModPanelService:Start()
     self._maid:GiveTask(Players.PlayerAdded:Connect(function(player)
          self:LoadPanel(player)
     end))
+
 end
 
 function ModPanelService:LoadPanel(player)

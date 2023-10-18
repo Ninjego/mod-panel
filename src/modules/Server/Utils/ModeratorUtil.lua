@@ -24,9 +24,7 @@ function ModeratorUtil.sendClient(action, player, maid)
     end
 
     local action = maid:GiveTask(ClientActionsUtil.fireAction(action, player, maid))
-
-    return
-    
+    print(action)
 end
 
 return ModeratorUtil

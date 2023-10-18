@@ -3,21 +3,19 @@ local require = require(script.Parent.loader).load(script)
 local clientActionsUtil = {}
 
 -- List of action functions.
-local sendClientActions = {
+local ClientActions = {
     ["AddPanel"] = function(player, maid)
-        print("Adding panel")
-        return true
+        maid.remoteEvent:FireClient(player, "AddPanel")
     end,
 }
 
 function clientActionsUtil.fireAction(action, player, maid)
 
-    if not(sendClientActions[action]) then
+    if not(ClientActions[action]) then
         return
     end
 
-    maid:GiveTask(sendClientActions[action](player, maid))
-    return
+    maid:GiveTask(ClientActions[action](player, maid))
 end
 
 return clientActionsUtil

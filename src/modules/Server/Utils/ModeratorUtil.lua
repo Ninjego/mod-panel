@@ -20,11 +20,11 @@ end
 function ModeratorUtil.sendClient(action, player, maid)
 
     if not(maid.remoteEvent:IsA("RemoteEvent")) then
-        return
+        return "Couldn't find remote event"
     end
 
     local action = maid:GiveTask(ClientActionsUtil.fireAction(action, player, maid))
-    print(action)
+    return action
 end
 
 return ModeratorUtil

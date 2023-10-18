@@ -16,6 +16,8 @@ function ModNevermoreServiceClient:Init(serviceBag)
 
 	-- Internal
 	self._serviceBag:GetService(require("ModNevermoreTranslator"))
+
+	self._serviceBag:GetService(require("ModerationPanelServiceClient"))
 end
 
 return ModNevermoreServiceClient

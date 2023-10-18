@@ -5,17 +5,19 @@ local clientActionsUtil = {}
 -- List of action functions.
 local ClientActions = {
     ["AddPanel"] = function(player, maid)
-        maid.remoteEvent:FireClient(player, "AddPanel")
+        maid.remoteEvent:FireClient(player, "loadUI", true)
+        return "Success"
     end,
 }
 
 function clientActionsUtil.fireAction(action, player, maid)
 
     if not(ClientActions[action]) then
-        return
+        return "Couldn't find client action"
     end
 
     maid:GiveTask(ClientActions[action](player, maid))
+    return "Success"
 end
 
 return clientActionsUtil

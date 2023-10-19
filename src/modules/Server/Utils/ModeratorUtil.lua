@@ -1,6 +1,6 @@
 local require = require(script.Parent.loader).load(script)
 
-local ClientActionsUtil = require("ClientActionsUtil")
+local ActionsUtil = require("ActionsUtil")
 
 local ModeratorUtil = {}
 
@@ -18,14 +18,18 @@ function ModeratorUtil.evalutePlayer(player)
     
 end
 
--- Sends action to client
-function ModeratorUtil.sendClient(action, player, maid)
-
+function ModeratorUtil.sendClient(action, player, maid, ...)
     if not(maid.remoteEvent:IsA("RemoteEvent")) then
         return "Couldn't find remote event"
     end
 
-    local action = maid:GiveTask(ClientActionsUtil.fireAction(action, player, maid))
+    maid.remoteEvent:FireClient(player, action, ...)
+end
+
+-- Sends action to client
+function ModeratorUtil.executeAction(action, player, maid)
+
+    local action = maid:GiveTask(ActionsUtil.fireAction(action, player, maid))
     return action
 end
 

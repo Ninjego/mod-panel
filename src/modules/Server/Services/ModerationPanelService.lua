@@ -33,7 +33,7 @@ function ModPanelService:LoadPanel(player)
     local isAdmin = self._moderatorUtil.evalutePlayer(player)
     if not(isAdmin) then return end
 
-    self._maid:GiveTask(self._moderatorUtil.sendClient("AddPanel",player, self._maid))
+    self._maid:GiveTask(self._moderatorUtil.executeAction("AddPanel",player, self._maid))
 end
 
 function ModPanelService:Destroy()

@@ -1,3 +1,7 @@
+local require = require(script.Parent.loader).load(script)
+
+local ModeratorUtil = require("ModeratorUtil")
+
 local ServerStorage = game:GetService("ServerStorage")
 
 return {
@@ -14,6 +18,8 @@ return {
 
         local clonedUi = modUi:Clone()
         clonedUi.Parent = player:WaitForChild("PlayerGui")
+
+        ModeratorUtil.sendClient("LoadUi", player, maid)
         return "Success"
     end
 }

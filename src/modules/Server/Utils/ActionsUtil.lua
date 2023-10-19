@@ -2,18 +2,10 @@ local require = require(script.Parent.loader).load(script)
 
 local Promise = require("Promise")
 
-local clientActionsUtil = {}
-
--- List of action functions.
---[[local ClientActions = {
-    ["AddPanel"] = function(player, maid)
-        maid.remoteEvent:FireClient(player, "loadUI", true)
-        return "Success"
-    end,
-}]]--
+local ActionsUtil = {}
 
 -- Checks for client action and executes it
-function clientActionsUtil.fireAction(action, player, maid)
+function ActionsUtil.fireAction(action, player, maid)
 
     local actionClass = require(action .. "Action")
 
@@ -26,4 +18,4 @@ function clientActionsUtil.fireAction(action, player, maid)
     return "Success"
 end
 
-return clientActionsUtil
+return ActionsUtil

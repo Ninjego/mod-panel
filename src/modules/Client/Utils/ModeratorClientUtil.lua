@@ -4,25 +4,17 @@ local Maid = require("Maid")
 
 local ModeratorClientUtil = {}
 
--- List of client based actions
-local actionList = {
-
-    ["loadUI"] = function(show)
-        print(show)
-        return "Success"
-    end
-
-}
-
 -- Handles payload from server
 function ModeratorClientUtil.onClient(action, ...)
-    if not(actionList[action]) then
-        return "Couldn't find action"
+    local actionClass = require(action .. "ClientAction")
+
+    if not(actionClass) then
+        warn("Couldn't find specified action class,", action)
+        return "Unsuccessful"
     end
 
     local maid = Maid.new()
-
-    maid:GiveTask(actionList[action](...))
+    maid:GiveTask(actionClass.execute(...))
     return "Success"
 end
 

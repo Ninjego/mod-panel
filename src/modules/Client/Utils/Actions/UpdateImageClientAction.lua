@@ -18,7 +18,7 @@ return {
                 return "Unsuccessful"
             end
 
-            modUi.Main.Topbar.PlayerImage.Image = image
+            modUi.Main.Topbar.Title.PlayerImage.Image = image
         end)
         return "Success"
     end

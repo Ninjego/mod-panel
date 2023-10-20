@@ -13,10 +13,10 @@ return {
 
     },
     execute = function(maid)
-        UpdateImageAction.execute(maid)
-        UpdateTitleAction.execute(maid, player.Name)
-        RegisterToggleAction.execute(maid)
-        UpdatePlayersAction.execute(maid)
+        maid:GiveTask(UpdateImageAction.execute(maid))
+        maid:GiveTask(UpdateTitleAction.execute(maid, player.Name))
+        maid:GiveTask(RegisterToggleAction.execute(maid))
+        maid:GiveTask(UpdatePlayersAction.execute(maid))
         return "Success"
     end
 }

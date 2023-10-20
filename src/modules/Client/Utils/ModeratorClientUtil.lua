@@ -14,7 +14,7 @@ function ModeratorClientUtil.onClient(action, ...)
     end
 
     local maid = Maid.new()
-    maid:GiveTask(actionClass.execute(...))
+    maid:GiveTask(actionClass.execute(maid, ...))
     return "Success"
 end
 

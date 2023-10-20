@@ -10,7 +10,7 @@ return {
     args = {
 
     },
-    execute = function()    
+    execute = function(maid)    
         PlayerThumbnailUtils.promiseUserThumbnail(player.UserId):Then(function(image)
             local modUi = PlayerGui:FindFirstChild("ModUi")
 

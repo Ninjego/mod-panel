@@ -20,5 +20,6 @@ return {
         end
 
         modUi.Main.InformationFrame.PlayersFrame.ValueLabel.Text = #game:GetService("Players"):GetPlayers()
+        return "Success"
     end
 }

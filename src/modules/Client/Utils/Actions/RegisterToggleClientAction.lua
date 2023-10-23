@@ -26,5 +26,6 @@ return {
         maid:GiveTask(modUi.Main.Topbar.ExitButton.Activated:Connect(function()
             modUi.Main.Visible = false
         end))
+        return "Success"
     end
 }

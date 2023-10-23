@@ -19,5 +19,6 @@ return {
         end
 
         modUi.Main.InformationFrame.UpTimeFrame.ValueLabel.Text = ClockClientUtil.secondsToClock(math.floor(workspace.DistributedGameTime))
+        return "Success"
     end
 }

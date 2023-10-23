@@ -15,6 +15,7 @@ function ModPanelService:Init(serviceBag)
     self._maid = Maid.new()
     self._moderatorUtil = ModeratorUtil
 
+    self._rankService = self._serviceBag:GetService(require("RankService"))
     self._maid.remoteEvent = Instance.new("RemoteEvent", ReplicatedStorage)
 end
 

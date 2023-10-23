@@ -25,7 +25,6 @@ function ModPanelService:Start()
     self._maid:GiveTask(Players.PlayerAdded:Connect(function(player)
          self:LoadPanel(player)
     end))
-
 end
 
 -- Loads panel for each administrator connecting

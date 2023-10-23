@@ -19,6 +19,7 @@ return {
             end
 
             modUi.Main.Topbar.Title.PlayerImage.Image = image
+            modUi.Main.MainFrame.AvatarImage.Image = image
         end)
         return "Success"
     end

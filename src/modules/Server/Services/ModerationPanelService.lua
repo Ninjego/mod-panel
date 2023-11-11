@@ -14,9 +14,11 @@ function ModPanelService:Init(serviceBag)
     self._serviceBag = assert(serviceBag, "No serviceBag")
     self._maid = Maid.new()
     self._moderatorUtil = ModeratorUtil
-
-    self._rankService = self._serviceBag:GetService(require("RankService"))
+    
     self._maid.remoteEvent = Instance.new("RemoteEvent", ReplicatedStorage)
+    
+    self._rankService = self._serviceBag:GetService(require("RankService"))
+    self._playerDataStoreService = self._serviceBag:GetService(require("PlayerDataStoreService"))
 end
 
 -- Checks for administrators connecting

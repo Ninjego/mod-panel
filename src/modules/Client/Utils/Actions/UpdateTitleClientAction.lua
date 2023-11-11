@@ -15,8 +15,8 @@ return {
             return "Unsuccessful"
         end
 
-        modUi.Main.Topbar.Title.TitleLabel.Text = title
-        modUi.Main.MainFrame.NameLabel.Text = title
+        modUi.Frame.Topbar.Title.TitleLabel.Text = title
+        modUi.Frame.Main.MainFrame.NameLabel.Text = title
         return "Success"
     end
 }

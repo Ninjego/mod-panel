@@ -19,7 +19,7 @@ return {
             return "Unsuccessful"
         end
 
-        modUi.Main.InformationFrame.PlayersFrame.ValueLabel.Text = #game:GetService("Players"):GetPlayers()
+        modUi.Frame.Main.InformationFrame.PlayersFrame.ValueLabel.Text = #game:GetService("Players"):GetPlayers()
         return "Success"
     end
 }

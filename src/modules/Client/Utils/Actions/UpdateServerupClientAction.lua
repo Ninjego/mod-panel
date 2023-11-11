@@ -18,7 +18,7 @@ return {
             return "Unsuccessful"
         end
 
-        modUi.Main.InformationFrame.UpTimeFrame.ValueLabel.Text = ClockClientUtil.secondsToClock(math.floor(workspace.DistributedGameTime))
+        modUi.Frame.Main.InformationFrame.UpTimeFrame.ValueLabel.Text = ClockClientUtil.secondsToClock(math.floor(workspace.DistributedGameTime))
         return "Success"
     end
 }

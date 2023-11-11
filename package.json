@@ -12,6 +12,7 @@
     "@quenty/binder": "^9.0.0",
     "@quenty/clienttranslator": "^9.0.0",
     "@quenty/cmdrservice": "^8.0.1",
+    "@quenty/datastore": "^8.1.1",
     "@quenty/loader": "^7.0.0",
     "@quenty/maid": "^2.6.0",
     "@quenty/playerthumbnailutils": "^7.0.0",

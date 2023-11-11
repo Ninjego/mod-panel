@@ -20,11 +20,11 @@ return {
 
         maid:GiveTask(modUi.ToggleButton.Activated:Connect(function()
             UpdateServerupAction.execute()
-            modUi.Main.Visible = not modUi.Main.Visible
+            modUi.Frame.Visible = not modUi.Frame.Visible
         end))
 
-        maid:GiveTask(modUi.Main.Topbar.ExitButton.Activated:Connect(function()
-            modUi.Main.Visible = false
+        maid:GiveTask(modUi.Frame.Topbar.ExitButton.Activated:Connect(function()
+            modUi.Frame.Visible = false
         end))
         return "Success"
     end

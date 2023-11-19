@@ -48,11 +48,14 @@ function ButtonObject:render()
                         MaxTextSize = 25;
                     };
                 };
+                [Blend.OnEvent "Activated"] = self:onAction()
             };
         };
     }
 
-    self._maid:GiveTask(render:Subscribe(function(gui) end))
+    self._maid:GiveTask(render:Subscribe(function(gui)
+    
+    end))
 end
 
 return ButtonObject

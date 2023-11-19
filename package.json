@@ -16,6 +16,7 @@
     "@quenty/loader": "^7.0.0",
     "@quenty/maid": "^2.6.0",
     "@quenty/playerthumbnailutils": "^7.0.0",
+    "@quenty/rx": "^8.1.1",
     "@quenty/servicebag": "^7.0.0"
   },
   "publishConfig": {

@@ -18,4 +18,8 @@ function UIObject:render()
     
 end
 
+function UIObject:onAction()
+    print("Test")
+end
+
 return UIObject
